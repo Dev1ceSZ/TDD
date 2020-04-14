@@ -21,7 +21,7 @@ class HomePageTest(TestCase):
         self.assertIn('<title>To-Do lists</title>',html)
         self.assertTrue(html.strip().endswith('</html>'))
 
-        self.assertTemplateUsed(response,'hoe.html')
+        self.assertTemplateUsed(response,'home.html')
 
     def test_use_home_template(self):
         response = self.client.get('/')
